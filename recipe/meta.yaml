@@ -1,4 +1,4 @@
-{% set version = '5.6.1' %}
+{% set version = "5.7.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/sdcMicro_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/sdcMicro/sdcMicro_{{ version }}.tar.gz
-  sha256: a1447a5a5d5a3af04925afc5e2b664db51aa97459c13dfdb7542e915c9e0aa8a
+  sha256: 8437b130630d78072be9f24f0afcb0ce5ceedc7974a2a76aaa20614ce9d14381
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   rpaths:
     - lib/R/lib/
@@ -83,17 +83,11 @@ test:
 about:
   home: https://github.com/sdcTools/sdcMicro
   license: GPL-2.0-only
-  summary: Data from statistical agencies and other institutions are mostly confidential. This
-    package (see also Templ, Kowarik and Meindl (2017) <doi:10.18637/jss.v067.i04>)
-    can be used for the generation of anonymized (micro)data, i.e. for the creation
-    of public- and scientific-use files. The theoretical basis for the methods implemented
-    can be found in Templ (2017) <doi:10.1007/978-3-319-50272-4>. Various risk estimation
-    and anonymisation methods are included. Note that the package includes a graphical
-    user interface (Meindl and Templ, 2019 <doi:10.3390/a12090191>) that allows to use
-    various methods of this package.
+  summary: Data from statistical agencies and other institutions are mostly confidential. This package (see also Templ, Kowarik and Meindl (2017) <doi:10.18637/jss.v067.i04>) can be used for the generation of anonymized (micro)data, i.e. for the creation of public- and scientific-use files. The theoretical basis for the
+    methods implemented can be found in Templ (2017) <doi:10.1007/978-3-319-50272-4>. Various risk estimation and anonymisation methods are included. Note that the package includes a graphical user interface (Meindl and Templ, 2019 <doi:10.3390/a12090191>) that allows to use various methods of this package.
   license_family: GPL2
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
