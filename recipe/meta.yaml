@@ -1,4 +1,4 @@
-{% set version = "5.7.1" %}
+{% set version = "5.7.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/sdcMicro_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/sdcMicro/sdcMicro_{{ version }}.tar.gz
-  sha256: 8437b130630d78072be9f24f0afcb0ce5ceedc7974a2a76aaa20614ce9d14381
+  sha256: 4e07301d88acb2a99e54b3b2c92d9ed38c52f9c869f2ec371a7e35b37513723b
 
 build:
   merge_build_host: true  # [win]
