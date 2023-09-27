@@ -3,6 +3,7 @@ About r-sdcmicro-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-sdcmicro-feedstock/blob/main/LICENSE.txt)
 
+
 About r-sdcmicro
 ----------------
 
@@ -11,6 +12,7 @@ Home: https://github.com/sdcTools/sdcMicro
 Package license: GPL-2.0-only
 
 Summary: Data from statistical agencies and other institutions are mostly confidential. This package (see also Templ, Kowarik and Meindl (2017) <doi:10.18637/jss.v067.i04>) can be used for the generation of anonymized (micro)data, i.e. for the creation of public- and scientific-use files. The theoretical basis for the methods implemented can be found in Templ (2017) <doi:10.1007/978-3-319-50272-4>. Various risk estimation and anonymisation methods are included. Note that the package includes a graphical user interface (Meindl and Templ, 2019 <doi:10.3390/a12090191>) that allows to use various methods of this package.
+
 About r-sdcmicro
 ----------------
 
