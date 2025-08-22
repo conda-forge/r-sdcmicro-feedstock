@@ -1,4 +1,4 @@
-{% set version = "5.7.8" %}
+{% set version = "5.7.9" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/sdcMicro_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/sdcMicro/sdcMicro_{{ version }}.tar.gz
-  sha256: 38db32f9f36fcaab60031cdb43efe6407b4e34034caada3582be63b833180da3
+  sha256: b00fcdbc6cd733ce3d1f105c0e1f24dbb501de8582797d90f9aa5f2de9ae78ea
 
 build:
   number: 0
