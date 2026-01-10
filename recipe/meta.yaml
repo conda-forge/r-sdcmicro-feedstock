@@ -1,4 +1,4 @@
-{% set version = "5.7.9" %}
+{% set version = "5.8.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,13 +9,17 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/sdcMicro_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/sdcMicro/sdcMicro_{{ version }}.tar.gz
-  sha256: b00fcdbc6cd733ce3d1f105c0e1f24dbb501de8582797d90f9aa5f2de9ae78ea
+  sha256: 80ac14f300f1cbaa21db48fe59036a15e636e083e594d6e261360e7232d34253
 
 build:
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
@@ -44,13 +48,14 @@ requirements:
     - r-e1071
     - r-ggplot2
     - r-haven
+    - r-httr
+    - r-jsonlite
     - r-knitr
     - r-prettydoc
     - r-rhandsontable
     - r-rmarkdown
     - r-robustbase
     - r-shiny >=1.4.0
-    - r-shinybs
     - r-xtable
   run:
     - r-base
@@ -65,13 +70,14 @@ requirements:
     - r-e1071
     - r-ggplot2
     - r-haven
+    - r-httr
+    - r-jsonlite
     - r-knitr
     - r-prettydoc
     - r-rhandsontable
     - r-rmarkdown
     - r-robustbase
     - r-shiny >=1.4.0
-    - r-shinybs
     - r-xtable
 
 test:
