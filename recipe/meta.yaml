@@ -1,4 +1,4 @@
-{% set version = "5.8.0" %}
+{% set version = "5.8.1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/sdcMicro_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/sdcMicro/sdcMicro_{{ version }}.tar.gz
-  sha256: 80ac14f300f1cbaa21db48fe59036a15e636e083e594d6e261360e7232d34253
+  sha256: ec084eaeb0441f17fb3e3805e9a383d9b39da855d8ad92ba23c5605cc5ffdbb8
 
 build:
   number: 0
@@ -88,8 +88,8 @@ test:
 about:
   home: https://github.com/sdcTools/sdcMicro
   license: GPL-2.0-only
-  summary: Data from statistical agencies and other institutions are mostly confidential. This package (see also Templ, Kowarik and Meindl (2017) <doi:10.18637/jss.v067.i04>) can be used for the generation of anonymized (micro)data, i.e. for the creation of public- and scientific-use files. The theoretical basis for the
-    methods implemented can be found in Templ (2017) <doi:10.1007/978-3-319-50272-4>. Various risk estimation and anonymisation methods are included. Note that the package includes a graphical user interface (Meindl and Templ, 2019 <doi:10.3390/a12090191>) that allows to use various methods of this package.
+  summary: Data from statistical agencies and other institutions are mostly confidential. This package (see also Templ, Kowarik and Meindl (2017) <doi:10.18637/jss.v067.i04>) can be used for the generation of anonymized (micro)data, i.e. for the creation of public- and scientific-use files. The theoretical basis for 
+    the methods implemented can be found in Templ (2017) <doi:10.1007/978-3-319-50272-4>. Various risk estimation and anonymisation methods are included. Note that the package includes a graphical user interface (Meindl and Templ, 2019 <doi:10.3390/a12090191>) that allows to use various methods of this package.
   license_family: GPL2
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
